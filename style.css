@@ -38,6 +38,12 @@ body {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .wrap {
+    width: min(100vw - 40px, 132rem);
+  }
+}
+
 h1, h2, h3 {
   font-family: "Libre Baskerville", serif;
 }
@@ -91,10 +97,10 @@ a:hover {
 
   .frame__container {
     margin: 0 20px 0;
-    padding: 20px;
+    padding: 20px 0;
     background: var(--color-white);
     display: block;
-    width: calc(100vw - 80px);
+    width: calc(100vw - 40px);
     min-height: calc(100vh - 80px);
   }
 }
@@ -141,10 +147,18 @@ header {
   align-self: flex-start;
   top: 80px;
   padding-right: 80px;
-  height: calc(100vh - 160px);
+  min-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .intro {
+    padding-right: 0;
+    min-height: auto;
+  }
 }
 
 .intro p {
