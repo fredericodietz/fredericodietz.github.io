@@ -8,7 +8,6 @@
   --frame-color: var(--color-dark);
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
   font-weight: 400;
@@ -31,16 +30,19 @@ body {
   margin: 0;
   min-height: 100vh;
   font-size: 1.6rem;
+  overflow-y: auto;
+  max-width: 100vw;
+  scrollbar-gutter: stable;
 }
 
 .wrap {
-  width: min(100vw - 80px, 132rem);
+  width: min(100% - 40px, 132rem);
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {
   .wrap {
-    width: min(100vw - 40px, 132rem);
+    width: min(100% - 20px, 132rem);
   }
 }
 
@@ -65,7 +67,7 @@ a:hover {
 .frame {
   position: fixed;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 40px;
   background-color: var(--frame-color);
   z-index: 10;
@@ -84,7 +86,7 @@ a:hover {
   padding: 40px 0;
   background: var(--color-white);
   display: block;
-  width: calc(100vw - 80px);
+  width: calc(100% - 80px);
   min-height: calc(100vh - 80px);
   color: #352f36;
   position: relative;
@@ -100,13 +102,12 @@ a:hover {
     padding: 20px 0;
     background: var(--color-white);
     display: block;
-    width: calc(100vw - 40px);
+    width: calc(100% - 40px);
     min-height: calc(100vh - 80px);
   }
 }
 
 h1 {
-  margin-bottom: 0;
   font-size: 3rem;
 }
 
@@ -222,8 +223,13 @@ section {
 
 .picture img {
   max-width: 100%;
-  /* border-radius: 12px; */
+  /* filter: grayscale(1); */
+  /* transition: all 0.3s; */
 }
+
+/* .picture img:hover {
+  filter: grayscale(0);
+} */
 
 .experience {
   opacity: 1;
