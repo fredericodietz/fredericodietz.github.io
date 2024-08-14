@@ -280,6 +280,10 @@ section {
   background-color: #d0d0d0;
 }
 
+.experience__skills p {
+  margin-bottom: 0;
+}
+
 .experience__skills span {
   background-color: #f8e19c;
   display: inline-block;
